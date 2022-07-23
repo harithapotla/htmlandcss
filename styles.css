@@ -15,3 +15,28 @@
         .para2 {
             position:relative;
         }
+        .d1 {
+            width:200px;
+            height:200px;
+            border:3px solid greenyellow;
+            position: relative;
+            top:0px;
+            left:0px;
+            
+        }
+        .d2 {
+            width:200px;
+            height:200px;
+            border:3px solid orange;
+            position:relative;
+            top:25px;
+            left:25px;
+        }
+        .d3 {
+            width:200px;
+            height:200px;
+            border:3px solid navy;
+            position:relative;
+            top:50px;
+            left:50px;
+        }
