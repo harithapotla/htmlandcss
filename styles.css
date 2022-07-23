@@ -9,3 +9,9 @@
             border-radius: 20px;
             
         }
+        #para1 {
+            color:rgb(20, 173, 220)
+        }
+        .para2 {
+            position:relative;
+        }
