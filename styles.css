@@ -9,9 +9,36 @@
             border-radius: 20px;
             
         }
+        h2::first-letter {
+            color:blueviolet;
+            font-size: 50px;
+        }
+        h2::after {
+            content:"  so much";
+            color: greenyellow;
+
+        }
         #para1 {
             color:rgb(20, 173, 220)
         }
+        #para1::first-line {
+            color:sandybrown;
+        }
+        #para1::first-letter {
+            font-size: 30px;
+            color:green;
+        }
+        #para1::after {
+            content:"   because family love is unconditional";
+            color:red;
+            font-size:20px;
+            font-variant: initial;
+            display:block;
+            font-style: italic;
+
+        }
+        
+        
         .para2 {
             color: brown;
             position:fixed;
@@ -40,6 +67,7 @@
             left:0px;
             
         }
+        
         .d2 {
             width:200px;
             height:200px;
