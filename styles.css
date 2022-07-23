@@ -13,12 +13,27 @@
             color:rgb(20, 173, 220)
         }
         .para2 {
-            position:relative;
+            color: brown;
+            position:fixed;
+            top:0px;
+            left:0px;
+            
+        }
+        .para4 {
+            color:gold;
+            font-size: 20px;
+            position: sticky;
+            top:20px;
+            left:20px;
+            padding: 24px;
+            border: 3px solid black;
+            margin:50px;
         }
         .d1 {
             width:200px;
             height:200px;
-            border:3px solid greenyellow;
+            background-color: greenyellow;
+            border:3px solid;
             position: relative;
             top:0px;
             left:0px;
@@ -27,15 +42,17 @@
         .d2 {
             width:200px;
             height:200px;
-            border:3px solid orange;
+            background-color: blueviolet;
+            border:3px solid;
             position:relative;
-            top:25px;
-            left:25px;
+            top:10px;
+            left:10px;
         }
         .d3 {
             width:200px;
             height:200px;
-            border:3px solid navy;
+            background-color: blue;
+            border:3px solid;
             position:relative;
             top:50px;
             left:50px;
