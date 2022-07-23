@@ -1,7 +1,11 @@
-<style>
-        h1 {
+
+.head1 {
             color: blueviolet;
             background-color: hotpink;
-            font-size: 20px;
+            font-size: 90px;
+            padding: 100px;
+            border: 1px solid green;
+            margin: 20px;
+            border-radius: 20px;
+            
         }
-    </style>
