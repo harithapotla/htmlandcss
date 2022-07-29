@@ -57,8 +57,31 @@
         else {
             console.log('discount available: 10%' );
         }
-
         
+        //another example of if-else statement
+
+        let temperature =3;
+        if(temperature<15) {
+            console.log('it is cool today');
+        }
+        else {
+            console.log('it is warm');
+        }
+        //example of currentHour
+        let currentHour = new Date().getHours();
+        
+        if(currentHour >=0 && currentHour < 12) {
+            console.log('Good morning');
+        }
+        else if(currentHour >=12 && currentHour < 16) {
+            console.log('good afternoon');
+        }
+        else if(currentHour >=16 && currentHour < 20) {
+            console.log('good evening');
+        }
+        else {
+            console.log('goodnight');
+        }
         </script>
     </body>
 </html>
