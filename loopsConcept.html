@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+<style type="text/css">
+    h1 { 
+        background-color: orange;
+        border:1px;
 
+    }
+</style>
     </head>
     <body>
         <script>
@@ -13,11 +19,59 @@
         console.log(numArray[r]);
     }
     
-    for(i=1; i<10; i=)
-    {
-        console.log(i);
-    }
 
-        </script>
+    for(let x=0;x<=3;x++)
+{
+    if(x===2){
+    break;
+    }
+    console.log(x);
+} ;   
+//for each example
+ var pass =[23,24,23,27,28,29,30,31,32];
+ pass.forEach(function(x,y)
+ {
+    if(x%2==0){
+     console.log(pass[y]);
+    }
+    
+ });
+//mapping example that means we are storing copy of the array in y
+var x=[11,12,13,14,17,18,19,20];
+var y= x.filter(function(a,b)
+{
+if(x%2==0){
+    return true;
+}
+else{
+return false;
+}
+
+}
+);
+console.log(y);
+//array reverse() method
+var ar = ['Hari','tha'];
+var c = ar.join(',');
+console.log(c);
+
+//split()
+var a = 'i love you';
+var b = a.split('').reverse();
+console.log(b);
+//example of slice method in array
+const str = 'life.is beautiful';
+console.log(str.slice(0,4));
+
+const numbers = [1,2,3,4,5];
+const squaredNumbers = numbers.map((n)=>n*n);
+console.log(squaredNumbers);
+
+var someArray = ['java', 'c','c**'];
+someArray.forEach((elem)=> console.log(elem));
+
+ </script>
+ <h1 onfocus="this.size='40'"> i love my india</h1>
+
     </body>
 </html>
