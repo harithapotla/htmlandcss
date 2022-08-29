@@ -70,7 +70,56 @@ console.log(squaredNumbers);
 var someArray = ['java', 'c','c**'];
 someArray.forEach((elem)=> console.log(elem));
 
+var ar=[12,49,29,10,33,22,16];
+        var br=ar.filter((elem)=>elem%2===0);//ar.filter((a)=>a%2===0);
+        console.log(br);
+        var cr=ar.filter((a)=>a%2!==0);
+        console.log(cr);
+        //by using arrow functions in constructor function
+
+        function Employee (fn,ln,age)
+        {
+        this.firstname=fn,
+        this.lastname=ln,
+        this.age=age,
+        this.fullname=function(){
+            setTimeout(()=>
+            {
+                return(this.firstname+' '+this.lastname);
+            },2000)
+    
+        }
+        this.details=function() {
+            return this.fullname() + ' .my age is ' + this.age;
+        }
+    };
+    var emp1 = new Employee('haritha', 'potla', 28);
+    var emp2 = new Employee('ravivenkatesh', 'myneni', 31);
+    var emp3 = new Employee('aahanya', 'myneni', 4);
+    console.log(emp1.fullname());
+    console.log(emp2.details());
+
+    function mul(a,b,c=1)
+    {
+        console.log(a*b*c);
+    }
+    mul(10,20,3);
+    mul(100,4);
+
+    var obj ={ 
+        firstname:'haritha',
+        lastname:'potla',
+        age:28,
+        address:{
+            town:'sainikpuri',
+            city:'hyderabad'
+        }
+        }
+        var {firstname,lastname,age,address:{city}} = obj;
+        console.log(city);
+
  </script>
+
  <h1 onfocus="this.size='40'"> i love my india</h1>
 
     </body>
