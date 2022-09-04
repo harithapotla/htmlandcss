@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .bestviewer {
+            font-style: italic;
+        }
+        
+    </style>
+</head>
+<body>
+   <div id="r1"></div> 
+   <div id="r2"></div>
+
+<script type="text/babel">
+
+//creating another example for adding new students name on the list by using component and state(React.useState)
+  function X()
+ {
+    var [students,setStudents]=React.useState(['ravi','hari','sri','aahanya']);
+    function addStudent(){
+        var newStudent=document.getElementById('d1').value;
+        setStudents([...students,newStudent]);
+    }
+  return(<div className="bestviewer">
+     i love my self
+     <br/>
+     <input type="text" id="d1"/>
+     <button onClick={addStudent}>Add Student</button>
+     {
+        students.map((s)=> {
+            return (<li>{s}</li>)
+        })
+     }
+    </div>)
+}
+    
+ReactDOM.render(<X></X>,document.getElementById('r1'));
+
+//creating another students details with arrays in objects using react placing details in table
+
+function Y() {
+    var[students,setStudents]=React.useState([
+                                                {firstname:'haritha', lastname:'potla', age:28},
+                                                {firstname:'Ravi', lastname:'Venkatesh',age:32}
+                                            ])
+        return(<div>
+            <table border="2px" cellspacing="0px" cellpadding="10px">
+                <thead>
+                    <th>firstname</th>
+                    <th>lastname</th>
+                    <th>age</th>
+                </thead>
+                <tbody>
+                { students.map((students,i)=>{
+                    return (<tr>
+                       <td>{students.firstname}</td>
+                       <td>{students.lastname}</td>
+                       <td>{students.age}</td>
+                      </tr>)
+                })
+            }
+                    
+                    </tbody>
+                </table>
+            </div>)
+
+}
+ReactDOM.render(<Y></Y>,document.getElementById('r2'));
+    </script>
+</body>
+</html>

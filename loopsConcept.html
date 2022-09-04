@@ -79,25 +79,20 @@ var ar=[12,49,29,10,33,22,16];
 
         function Employee (fn,ln,age)
         {
-        this.firstname=fn,
-        this.lastname=ln,
-        this.age=age,
+        (this.firstname=fn),
+        (this.lastname=ln),
+        (this.age=age),
         this.fullname=function(){
             setTimeout(()=>
             {
-                return(this.firstname+' '+this.lastname);
+                console.log(this.firstname+' '+this.lastname);
             },2000)
-    
-        }
-        this.details=function() {
-            return this.fullname() + ' .my age is ' + this.age;
-        }
     };
+};
     var emp1 = new Employee('haritha', 'potla', 28);
     var emp2 = new Employee('ravivenkatesh', 'myneni', 31);
     var emp3 = new Employee('aahanya', 'myneni', 4);
-    console.log(emp1.fullname());
-    console.log(emp2.details());
+    emp1.fullname();
 
     function mul(a,b,c=1)
     {
@@ -115,12 +110,11 @@ var ar=[12,49,29,10,33,22,16];
             city:'hyderabad'
         }
         }
-        var {firstname,lastname,age,address:{city}} = obj;
-        console.log(city);
+        var {firstname,lastname,age,address:{town}} = obj;
+        console.log(town);
 
- </script>
+       </script>
 
- <h1 onfocus="this.size='40'"> i love my india</h1>
-
+ 
     </body>
 </html>

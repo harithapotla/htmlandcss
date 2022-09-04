@@ -4,6 +4,9 @@
 
     </head>
     <body>
+
+      <div id="dd"></div>
+      <div id="JS"></div>
  <script>
     /*how to create an HTML element
     how to set content to element
@@ -13,17 +16,15 @@
     how to remove an child element
     how to replace a cn element 
     */
-   var n = document.createElement('h1');
-   console.log(n);
-   //using ajax forsending request to database and getting response from it
-   var httpObj = new XMLHttpRequest();
-   httpObj.open('GET', 'https://fakestoreapi.com/products')
-   httpObj.send()
-   httpObj.onloadend = function()
-   {
-      console.log(httpObj);
-   };
-   
+   var newh1=document.createElement('h1')
+   newh1.innerHTML="creating an element"
+   document.getElementById('dd').appendChild(newh1);
+
+   var jsh1=document.createElement("h1");
+   jsh1.innerHTML="This is created by JavaScript....";
+   document.getElementById("JS").appendChild(jsh1);
+
+
  </script>       
     </body>
 </html>

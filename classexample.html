@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>praveensir class practice session</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .bend {
+            font-style: italic;
+            background-color: red;
+            color: aqua;
+        }
+        .bend1 {
+            border: 2px solid;
+            border-color:black;
+            margin:20px;
+            padding:50px;
+            border-radius: 20px;
+        }
+        .b1 {
+            text-align: center;
+            font-style: italic;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="r1"></div>
+    <div id="r2"></div>
+    <div id="r3"></div>
+    <div id="r4"></div>
+    <div id="r5"></div>
+    <div id="r6"></div>
+    <div id="r7"></div>
+    <div id="d"></div>
+    <div id="fav"></div>
+    <div id="d1"></div>
+    <div id="ab"></div>
+  <input type="text" id="ab1"/>
+  <button onclick="addTask()">Add Task</button>
+  <div id="abcd"></div>
+<script type="text/babel">
+
+//creating an element by button to add task in reaact
+//add a new task to the tasks
+var tasks=['carwash', 'flowers', 'sweets', 'plates', 'glasses'];
+function addTask() {
+    var newTask=document.getElementById('ab1').value;
+    tasks.push(newTask);
+    genList();
+}
+function genList() {
+var t1=<ul>
+    {
+        tasks.map((t1)=>{
+            return (<li>{t1}</li>)
+        })
+    }
+    </ul>
+    ReactDOM.render(t1,document.getElementById('abcd'));
+}
+genList();
+
+//crating an element by using an react method
+var newh1 = React.createElement('h1',null,'This is Created by React');
+ReactDOM.render(newh1,document.getElementById('r1'));
+
+//create an element by using a dom method
+var newh2=document.createElement('h1');
+newh2.innerHTML="This is created by Document Object Model"
+document.getElementById('r2').appendChild(newh2);
+
+//Create another example of react element along with styles
+var newh11 = React.createElement('h1', {style:{backgroundColor:'lightgreen'}}, 'This is also created by React and applying styles by using react');
+ReactDOM.render(newh11, document.getElementById('r3'));
+
+//create another example along with styles by using React
+var newh111 = React.createElement('h1', {style:{backgroundColor:'sandybrown', color:'white'},class:"bend1"},'this is created and style by using react along with classbend');
+ReactDOM.render(newh111, document.getElementById('r4'));
+
+//another example by using react method along with styling and class method
+var newh1111 = React.createElement('h1',{class:"bend"}, 'This is also created by using React')
+ReactDOM.render(newh1111, document.getElementById('r5'));
+
+//how to apply styles for dom object let see
+var newh22 = document.createElement('h1');
+newh22.innerHTML="this is create by dom and applying styles too";
+newh22.style.backgroundColor='violet';
+document.getElementById('r6').appendChild(newh22);
+
+//creating another react element by using lists and nested java coding inside the create element
+var dogs = ['husky', 'pitbull', 'retriver', 'pug'];
+var n1=React.createElement("h1",{style:{backgroundColor:'pink',color:'aqua'}},('in react we created list element with the helo of js'),
+    dogs.map((s)=>{
+        return (React.createElement('li',{style:{backgroundColor:'lightgreen',color:'red'}},
+        (s)))
+    })
+)
+ReactDOM.render(n1,document.getElementById('r7'));
+
+//creating an image element by using a dom model
+var img="https://c.ndtvimg.com/2022-06/nl3eoabo_deepika-padukone_625x300_13_June_22.jpg"
+var myImg = document.createElement('img');
+myImg.src=img;
+myImg.style.width="100px"
+document.getElementById('r2').appendChild(myImg);
+
+//now create an image by using react 
+var rimg=React.createElement('img',{src:img,width:'400px'},null);
+ReactDOM.render(rimg,document.getElementById('fav'));
+
+//now create an element by using jsx we can write js expression inside the h1 tag also by using flower brackets
+//now create list elements also inside the jsx by using flower brackets
+//even we can apply styles for these elements by using style 
+//apply class also in jsx with className
+var time=19;
+var students=['haritha','srilekha','sowmya','satish','dileep','mahalakshmi'];
+var r1=<h1 style={time>10?{backgroundColor:'pink'}:{backgroundColor:'grey'}} className="b1"> 
+       love to learn react because it is used to get growth in our carrier { 23+32}
+    {
+        students.map((t)=> {
+            return (<li>{t}</li>)
+        })
+    }
+    </h1>
+ReactDOM.render(r1,document.getElementById('d1'));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adding list</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<input type="text" id="d1"/>
+<button onclick="addTask()">Add Task</button>
+<div id="d2"></div>
+<input type="text" id="d11">
+<button onclick="addStudents()">Add Students</button>
+<div id="d22"></div>
+
+<script type="text/babel">
+
+var tasks= ['carwash', 'flowers', 'sweets', 'painting', 'artist'];
+function addTask() {
+    var newTask = document.getElementById('d1').value;
+    tasks.push(newTask);
+   genList();
+}
+
+function genList(){
+    var x= <ul>
+    {
+        tasks.map((t)=>{
+            return (<li>{t}</li>)
+        })
+    }
+    </ul>
+    ReactDOM.render(x,document.getElementById('d2')); 
+}
+genList();
+var students = ['haritha','venkatesh','aahanya'];
+ function addStudents() {
+    var newStudent=document.getElementById('d11').value;
+    students.push(newStudent);
+    genStudent();
+ }
+ function genStudent() {
+    var y=<ul>
+        {
+            students.map((s)=>{
+                return (<li>{s}</li>)
+            })
+        }
+    
+            </ul>
+            ReactDOM.render(y,document.getElementById('d22'));
+        }
+       
+    genStudent();
+
+</script>
+
+
+
+</body>
+</html>
