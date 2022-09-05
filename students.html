@@ -29,14 +29,18 @@
         var newStudent=document.getElementById('d1').value;
         setStudents([...students,newStudent]);
     }
+    function deleteStudent(id) {
+       var temp=[...students]
+    }
   return(<div className="bestviewer">
      i love my self
      <br/>
      <input type="text" id="d1"/>
      <button onClick={addStudent}>Add Student</button>
      {
-        students.map((s)=> {
-            return (<li>{s}</li>)
+        students.map((s,i)=> {
+            return (<li>{s}
+                <button onClick={()=>{deleteStudent(i)}}>Delete</button></li>)
         })
      }
     </div>)
@@ -51,8 +55,20 @@ function Y() {
                                                 {firstname:'haritha', lastname:'potla', age:28},
                                                 {firstname:'Ravi', lastname:'Venkatesh',age:32}
                                             ])
+         function addStudent(){
+            var newStudent={
+                firstname:document.getElementById("fn").value,
+                lastname:document.getElementById("ln").value,
+                age:document.getElementById("age").value
+            }
+            setStudents([...students,newStudent])
+         }
         return(<div>
-            <table border="2px" cellspacing="0px" cellpadding="10px">
+            <input type="text" id="fn"/><br/>
+            <input type="text" id="ln"/><br/>
+            <input type="text" id="age"/><br/>
+            <button onClick={addStudent}>Add student</button>
+               <table border="2px" cellspacing="0px" cellpadding="10px">
                 <thead>
                     <th>firstname</th>
                     <th>lastname</th>
