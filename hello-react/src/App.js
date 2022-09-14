@@ -6,10 +6,8 @@ import { Link, Outlet } from 'react-router-dom';
 function App() {
   return (
     <div className="betterview">
-    <a href="/home">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="/countries">Countries</a>&nbsp;&nbsp;&nbsp;&nbsp;
-    <Link to="/home">Homeeee</Link>&nbsp;&nbsp;&nbsp;&nbsp;
-    <Link to="/countries">Countriesssss</Link>
+    <Link to="/home">Home</Link>&nbsp;&nbsp;&nbsp;&nbsp;
+    <Link to="/countries">Countries</Link>
     <Outlet></Outlet>
     </div>
   )

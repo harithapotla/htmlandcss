@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Countries(){
 var [countries,setcountries]=React.useState([])
@@ -12,7 +13,9 @@ return(<div>
 <ul>
 {
     countries && countries.map((c,i)=>{
-        return (<li> {i} {c.name}</li>)
+        return (<li key={i}>
+            <Link to={`/countryDetails/${c.alpha2Code}`}>{c.name}</Link>
+            </li>)
     })
 }
 </ul>
